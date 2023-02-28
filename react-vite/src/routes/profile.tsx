@@ -20,6 +20,7 @@ const Profile = () => {
     fetchShoes()
   }, [])
 
+  //charger les données de la collection shoes
   const findAll = async () => {
     const doc_refs = await getDocs(collection(firestore, collection_name))
     const res: { id: string; }[] = []
@@ -38,9 +39,13 @@ const Profile = () => {
     /**
     * Extract the currrentUser from the context, if you want to
     * get the User info, like the email, display name, etc.
+    * <h3>Welcome! {currentUser?.email}</h3>
     */
     <div>
-      <h3>Welcome! {currentUser?.email}</h3>
+      <h1>Commande</h1>
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
       {shoes.map(shoe => (
         <button className='btn m-3' key={shoe.id} >marque : {shoe.marques} </button>
         ))}
