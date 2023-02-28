@@ -1,6 +1,7 @@
-import './App.css';
 import React, { useState, useEffect } from 'react';
 import { getShoes } from './config/shoes';
+import { Routes, Route } from "react-router-dom";
+import Home from './pages/Home'
 
 const App = () => {
   const [loading, setLoading] = useState(false)
@@ -34,6 +35,13 @@ const App = () => {
 
   return (
     <div className="App">
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+    </Routes>
+
+
+
+
       <h1 className='m-5'>shoes</h1>
         
       {shoes.map(shoe => (
