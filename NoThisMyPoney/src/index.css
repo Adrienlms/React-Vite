@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind component;
+@tailwind utilities;
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+  
+.btn-shadow {
+  box-shadow: -2px 15px 22px -8px rgba(255, 125, 26, 0.77);
+}
+
+.degrade {
+  background: linear-gradient(#C15503, #d88b61);
+}
+
+.shadow2 {
+  --tw-shadow: 5px 15px 50px 0 rgba(0, 0, 0, 0.466), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
